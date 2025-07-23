@@ -1,0 +1,58 @@
+@media screen and (min-width: 640px) {
+	.hero-navbar-logo {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		padding: 2rem 4rem 8rem;
+	}
+	.hero-navbar-menu {
+		display: flex;
+	}
+	.hero-navbar-sidebar-button {
+		display: none;
+	}
+	.hero .hero-navbar {
+		margin-bottom: 5rem;
+	}
+	.hero-text-title {
+		font-size: 3rem;
+	}
+	.cutting-off-text {
+		display: block;
+	}
+	.hero-text {
+		width: 70%;
+	}
+	.hero-image {
+		width: 30%;
+	}
+	.hero-text-title {
+		font-size: 3rem;
+	}
+	.hero-text-desc {
+		width: 75%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.hero-navbar-menu {
+		gap: 2rem;
+	}
+	.hero-navbar-menu a {
+		font-size: 1rem;
+	}
+	.hero-navbar-logo {
+		font-size: 2rem;
+	}
+	.hero-text-title {
+		font-size: 5rem;
+	}
+	.hero-text-desc {
+		font-size: 1.2rem;
+	}
+}
+@media screen and (min-width: 1400px) {
+}

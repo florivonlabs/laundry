@@ -11,7 +11,11 @@ body {
 	background-color: whitesmoke;
 	font-family: "Geist", sans-serif;
 }
+.hero-navbar-sidebar-button{
+	display: none;
+}
 
+/* Hero Section */
 .hero {
 	background-color: #87cefa;
 	width: 100%;
@@ -22,6 +26,7 @@ body {
 	border-radius: 10px;
 	margin-bottom: 1rem;
 	transition: all 0.1s ease;
+	overflow-x: hidden;
 }
 .hero .hero-navbar {
 	display: flex;
@@ -61,7 +66,7 @@ body {
 	display: flex;
 }
 .hero-text {
-	width: 95%;
+	width: 90%;
 }
 .hero-text-title {
 	width: 75%;
@@ -80,40 +85,50 @@ body {
 	margin-bottom: 4rem;
 }
 .hero-image {
-	width: 5%;
+	width: 10%;
 }
 .hero-image img {
 	position: relative;
-	left: -8rem;
-	width: 112%;
+	left: -6rem;
+	width: 1300%;
+	height: 50%;
+	z-index: 100;
+	transition: all 0.1s ease	;
 }
 .hero-button {
 	display: flex;
 	width: 50%;
-	justify-content: space-between;
+	gap: 2rem;
 	align-items: center;
 }
 .hero-button a {
-	font-weight: 800;
+	font-weight: 400;
+	font-size: 1rem;
 	padding: 1rem;
 	border-radius: 30px;
 	text-decoration: none;
 	transition: all 0.1s ease-in-out;
 }
+.hero-button a img {
+	margin-right: 0.5rem;
+	width: 1rem;
+
+}
 .hero-button-order {
 	display: flex;
-	gap: 1rem;
 	align-items: center;
 	background-color: rgba(24, 24, 27, 0.8);
 	color: #ffffff;
 }
 .hero-button-pricing {
 	display: flex;
-	gap: 1rem;
 	align-items: center;
 	color: #333333;
 	border: 1px solid #333333;
 }
 .cutting-off-text {
 	display: none;
+	margin: 0 4px;
 }
+
+/* End Hero Section */

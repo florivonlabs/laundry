@@ -1,9 +1,9 @@
 @media screen and (min-width: 425px) {
 	/* hero Section */
-	.hero-text{
-			width: 80%;
+	.hero-text {
+		width: 80%;
 	}
-	.hero-image{
+	.hero-image {
 		width: 20%;
 	}
 	.hero-image img {
@@ -12,7 +12,7 @@
 		height: auto;
 		width: 300%;
 	}
-	.hero-text-title{
+	.hero-text-title {
 		width: 75%;
 	}
 	.hero-text-desc {
@@ -25,13 +25,13 @@
 	.hero-navbar-logo {
 		font-size: 1.2rem;
 	}
-	.hero-text{
+	.hero-text {
 		width: 70%;
 	}
-	.hero-text-title{
+	.hero-text-title {
 		width: 100%;
 	}
-	.hero-image{
+	.hero-image {
 		width: 30%;
 	}
 	.hero-image img {
@@ -45,7 +45,7 @@
 @media screen and (min-width: 768px) {
 	/* Hero Section */
 	.hero {
-		padding: 2rem 4rem 4rem;
+		padding: 2rem 4rem 6rem;
 	}
 	.hero-navbar-menu {
 		display: flex;
@@ -79,12 +79,21 @@
 		width: 85%;
 		font-size: 1rem;
 	}
+	.hero-decoration {
+		bottom: -6rem;
+	}
+	#hero-decoration-1 {
+		right: 0rem;
+	}
+	#hero-decoration-2 {
+		left: -2rem;
+	}
 	/* End Hero Section */
 }
 
 @media screen and (min-width: 1024px) {
 	/* Hero Section */
-	.hero-navbar{
+	.hero-navbar {
 		margin-bottom: 5rem;
 	}
 	.hero-navbar-menu {
@@ -114,6 +123,15 @@
 	.hero-button a img {
 		width: 1.2rem;
 	}
+	.hero-decoration {
+		width: 9rem;
+	}
+	#hero-decoration-1 {
+		right: 10rem;
+	}
+	#hero-decoration-2 {
+		left: -2rem;
+	}
 	/* End Hero Section */
 }
 @media screen and (min-width: 1400px) {
@@ -121,10 +139,10 @@
 	.hero-text-title {
 		font-size: 5rem;
 	}
-	.hero .hero-navbar{
+	.hero .hero-navbar {
 		margin-bottom: 5rem;
 	}
-	.hero-text-desc{
+	.hero-text-desc {
 		width: 60%;
 		font-size: 1.5rem;
 	}
@@ -132,6 +150,12 @@
 		width: 130%;
 		left: -8rem;
 		top: 2rem;
+	}
+	#hero-decoration-1 {
+		right: 27rem;
+	}
+	#hero-decoration-2 {
+		left: -2rem;
 	}
 	/* End Hero Section */
 }

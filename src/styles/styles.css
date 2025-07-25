@@ -17,6 +17,7 @@ body {
 
 /* Hero Section */
 .hero {
+	height: fit-content;
 	background-color: #87cefa;
 	width: 100%;
 	display: flex;
@@ -25,6 +26,7 @@ body {
 	padding: 1rem;
 	border-radius: 10px;
 	margin-bottom: 1rem;
+	padding-bottom: 8rem;
 	transition: all 0.1s ease;
 	overflow-x: hidden;
 }
@@ -66,6 +68,7 @@ body {
 	display: flex;
 }
 .hero-text {
+	position: relative;
 	width: 90%;
 }
 .hero-text-title {
@@ -78,8 +81,8 @@ body {
 }
 .hero-text-desc {
 	width: 100%;
-	font-size: 0.8rem;
-	margin-bottom: 1rem;
+	font-size: 1rem;
+	margin-bottom: 2px;
 	color: #333333;
 	text-shadow: 0px 3px 3px rgba(51, 51, 51, 0.4);
 	margin-bottom: 4rem;
@@ -90,7 +93,7 @@ body {
 .hero-image img {
 	position: relative;
 	left: -6rem;
-	width: 1300%;
+	width: 800%;
 	height: 50%;
 	z-index: 100;
 	transition: all 0.1s ease	;
@@ -119,16 +122,40 @@ body {
 	align-items: center;
 	background-color: rgba(24, 24, 27, 0.8);
 	color: #ffffff;
+	transition: all 0.1s ease-in-out;
+}
+.hero-button-order:hover {
+	background-color: #3c9dd0;
+	color: #ffffff;
 }
 .hero-button-pricing {
 	display: flex;
 	align-items: center;
 	color: #333333;
 	border: 1px solid #333333;
+	transition: all 0.1s ease-in-out;
+}
+.hero-button-pricing:hover {
+	background-color: rgba(24, 24, 27, 0.8);
+	color: #ffffff;
 }
 .cutting-off-text {
 	display: none;
 	margin: 0 4px;
+}
+
+.hero-decoration {
+	position: absolute;
+	width: 8rem;
+	bottom: -7rem;
+	transition: all 0.1s ease;
+}
+#hero-decoration-1 {
+	right: -3rem;
+}
+#hero-decoration-2 {
+	left: 0rem;
+	width: 7rem;
 }
 
 /* End Hero Section */

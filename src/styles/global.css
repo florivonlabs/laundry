@@ -3,15 +3,17 @@
 
 @theme {
 	--breakpoint-xxs: 20rem;
-	--breakpoint-xs: 30rem; 
+	--breakpoint-xs: 30rem;
 	--text-shadow-home: 0px 3px 3px rgba(51, 51, 51, 0.4);
 	--text-tiny: 0.625rem;
+	--shadow-review: 3px 2px 7px 2px rgba(109, 109, 109, 0.46);
 }
 
 *,
 body {
 	margin: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -19,4 +21,16 @@ body {
 	padding-bottom: 0.2rem;
 	background-color: whitesmoke;
 	font-family: "Geist", sans-serif;
+}
+.space-y-4 {
+	:where(& > :not(:last-child)) {
+		--tw-space-y-reverse: 0;
+		margin-block-start: calc(calc(var(--spacing) * 4) /* 1rem = 16px */ * var(--tw-space-y-reverse));
+		margin-block-end: calc(calc(var(--spacing) * 4) /* 1rem = 16px */ * calc(1 - var(--tw-space-y-reverse)));
+	}
+}
+@property --tw-space-y-reverse {
+	syntax: "*";
+	inherits: false;
+	initial-value: 0;
 }

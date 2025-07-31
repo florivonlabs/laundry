@@ -1,5 +1,54 @@
 ---
+import { date, makeIssue } from "astro:schema"
 import "../styles/global.css"
+
+const reviews = [
+	{
+		name: "Miswan",
+		date: "16/08/2023",
+		review: `Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book.`,
+	},
+	{
+		name: "Ubay",
+		date: "17/08/2023",
+		review: `Lorem Ipsum`,
+	},
+	{
+		name: "Farizi",
+		date: "19/07/2023",
+		review: `“Lorem Ipsum is simply dummy text of the   printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text.”`,
+	},
+	{
+		name: "Ridho",
+		date: "20/07/2023",
+		review: `“Lorem Ipsum is simply dummy text of the   printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia lorem sit amet purus congue, sit amet fermentum leo venenatis. Nam at pulvinar mi.”.”`,
+	},
+	{
+		name: "Leubin",
+		date: "21/07/2023",
+		review: `“Donec tristique semper tortor ac posuere. Maecenas ex tellus, pellentesque sed posuere eu, vehicula et arcu.”`,
+	},
+	{
+		name: "Aqsa",
+		date: "22/07/2023",
+		review: `“Curabitur pulvinar, sapien nec commodo lobortis, felis metus fringilla ex, non maximus libero quam nec felis.”`,
+	},
+	{
+		name: "Khalid",
+		date: "29/07/2023",
+		review: `“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia lorem sit amet purus congue, sit amet fermentum leo venenatis. Nam at pulvinar mi. Donec tristique semper tortor ac posuere. Maecenas ex tellus, pellentesque sed posuere eu, vehicula et arcu. Curabitur pulvinar, sapien nec commodo lobortis, felis metus fringilla ex.”`,
+	},
+	{
+		name: "Miswan",
+		date: "16/08/2023",
+		review: `“dolor sit amet.”`,
+	},
+	{
+		name: "Miswan",
+		date: "16/08/2023",
+		review: `“dolor sit amet.”`,
+	},
+]
 ---
 
 <html lang="en">
@@ -13,15 +62,15 @@ import "../styles/global.css"
 	</head>
 	<body class="flex flex-col gap-4">
 		<!-- Hero Section -->
-		<div
+		<div id="hero"
 			class="hero bg-[#87cefa] w-full flex overflow-hidden flex-col rounded-lg p-4 relative sm:p-12 transition-all duration-100 pb-30 md:pb-28 lg:pb-38">
 			<div class="flex justify-between items-center w-full pb-10 text-[#333333] md:pb-16">
 				<div class="w-1/4 font-bold text-base md:text-2xl">LaundryKu</div>
 				<div class="w-3/4 gap-4 hidden xs:flex justify-end md:gap-16 items-center">
-					<a href="#" class="text-xs md:text-base">Beranda</a>
-					<a href="#" class="text-xs md:text-base">Harga</a>
-					<a href="#" class="text-xs md:text-base">Testimoni</a>
-					<a href="#" class="text-xs md:text-base">Kontak</a>
+					<a href="#hero" class="text-xs md:text-base">Beranda</a>
+					<a href="#pricing" class="text-xs md:text-base">Harga</a>
+					<a href="#reviews" class="text-xs md:text-base">Testimoni</a>
+					<a href="#footer" class="text-xs md:text-base">Kontak</a>
 				</div>
 			</div>
 			<div class="flex overflow-x-hidden">
@@ -36,14 +85,14 @@ import "../styles/global.css"
 					</div>
 					<div class="flex w-full justify-between xs:justify-start xs:gap-4 lg:gap-10">
 						<a
-							href="#"
+							href="#footer"
 							class="flex items-center bg-[#18181B]/80 p-4 hover:bg-[#18181B] rounded-3xl text-[#FFFFFF] text-sm lg:font-bold transition-all duration-100">
 							<img class="w-6 pr-2" src="/icons/shoping-cart.svg" />
 							Pesan
 							<span class="hidden md:block md:pl-1">Sekarang</span>
 						</a>
 						<a
-							href="#"
+							href="#pricing"
 							class="text-[#333333] border border-[#333333] hover:bg-[#18181B]/80 hover:text-[#FFFFFF] flex items-center p-4 rounded-3xl text-sm lg:font-bold transition-all duration-100">
 							<img class="w-6 pr-2" src="/icons/dollar.svg" />
 							<span class="hidden md:block md:pr-1">Lihat</span> Harga
@@ -67,7 +116,7 @@ import "../styles/global.css"
 			</div>
 		</div>
 		<!-- Pricing Section -->
-		<div class="flex flex-col md:flex-row gap-2 mt-4 md:pt-6 lg:pt-12">
+		<div id="pricing" class="flex flex-col md:flex-row gap-2 mt-4 md:pt-6 lg:pt-12">
 			<div
 				class="w-full md:w-1/3 bg-[#3C9DD0] text-white rounded-lg px-2 py-10 flex justify-center flex-col items-center relative">
 				<span class="font-bold text-2xl pb-4 lg:text-4xl">BEST OFFER</span>
@@ -167,22 +216,54 @@ import "../styles/global.css"
 			</div>
 		</div>
 		<!-- Review Section -->
-		<div></div>
+		<div id="reviews" class="flex flex-col px-2 lg:px-32 py-4">
+			<dir class="flex flex-col w-full justify-center items-center pb-4">
+				<div class="text-xl md:text-3xl xl:text-4xl pb-4 font-bold text-center text-shadow-home">
+					What Our Customers Say
+				</div>
+				<div class="text-center text-[#646565] w-4/5 md:w-3/5 xl:w-2/5">
+					Don't just take our word for it. Here's what our satisfied customers have to say about our laundry and
+					cleaning services.
+				</div>
+			</dir>
+			<div class="columns-1 md:columns-2 lg:columns-3 gap-4 w-full mx-auto pb-4 space-y-4">
+				<!-- Card Review -->
+				{
+					reviews.map((item) => (
+						<div class="flex break-inside-avoid flex-col gap-3 p-4 rounded-2xl shadow-review bg-white">
+							<div class="text-sm text-[#2B2B2B]">{item.review}</div>
+							<div class="flex justify-between items-center">
+								<div class="flex items-center gap-2">
+									<img src="/icons/user.svg" class="w-10" />
+									<div class="flex flex-col">
+										<span class="font-bold">{item.name}</span>
+										<span class="text-[#646565]">Customer</span>
+									</div>
+								</div>
+								<div>{item.date}</div>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
 		<!-- Footer Section -->
-		<footer class="bg-[#18181B] px-16 pt-12 pb-4 text-[#F1F1F1] rounded-lg">
+		<footer id="footer" class="bg-[#18181B] px-16 lg:px-32 pt-12 pb-4 text-[#F1F1F1] rounded-lg">
 			<div class="w-full flex justify-between flex-col md:flex-row pb-8">
 				<div class="flex flex-col gap-5 w-full md:w-1/5 pb-8 md:pb-0">
 					<div class="text-2xl font-bold">LaundryKu</div>
-					<div class="text-xs w-full md:w-2/3">Professional laundry and dry cleaning service with free pickup and delivery</div>
+					<div class="text-xs w-full md:w-2/3">
+						Professional laundry and dry cleaning service with free pickup and delivery
+					</div>
 				</div>
 				<div class="w-full md:w-2/5 flex gap-8 xs:gap-16 justify-between md:justify-end flex-col xs:flex-row">
 					<div class="flex flex-col gap-2">
 						<div class="text-xl font-bold">Services</div>
 						<div class="flex flex-col gap-2">
-							<div  class="text-xs">Wash & Fold</div>
-							<div  class="text-xs">Dry Cleaning</div>
-							<div  class="text-xs">Pickup & Delivery</div>
-							<div  class="text-xs"> Commercial Services</div>
+							<div class="text-xs">Wash & Fold</div>
+							<div class="text-xs">Dry Cleaning</div>
+							<div class="text-xs">Pickup & Delivery</div>
+							<div class="text-xs">Commercial Services</div>
 						</div>
 					</div>
 					<div class="flex flex-col gap-2">
